@@ -24,6 +24,19 @@ body {
     background-color:transparent;
     border-radius: 10px;
 }
+.container h1{
+    -webkit-text-stroke-color: #000000;
+    -webkit-text-stroke-width: 2px;
+}
+.container h2{
+    margin-top: 30px;
+    border: 2px solid rgb(0, 0, 0); 
+  padding: 10px;
+  background-color:white ;
+  color: black;
+ 
+  
+}
 
 header {
     margin-top: 200px;
@@ -38,6 +51,17 @@ header img {
     height: 191px;
 }
 
+.btn {
+    margin-top: 40px;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    background-color: #569058;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
 .filter-section {
     margin-top: 20px;
     display: flex;
@@ -61,7 +85,7 @@ header img {
     padding: 8px;
     width: 100%;
     border-radius: 5px;
-    border: 1px solid #ccc;
+    border: 2px solid #000000;
     text-align: left;
 }
 
@@ -69,7 +93,7 @@ header img {
     width: 100%;
     padding: 8px;
     border-radius: 5px;
-    border: 1px solid #ccc;
+    border: 2px solid #000000;
     text-align: left; 
 }
 
@@ -79,6 +103,7 @@ table.lessons {
     margin-top: 20px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     background-color: white;
+    margin-left: 10px;
 }
 
 table.lessons th, table.lessons td {
