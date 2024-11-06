@@ -1,81 +1,174 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ro">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=git init, initial-scale=1.0">
-    <title>Orar usarb</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orar Universitatea de Stat</title>
     <link rel="stylesheet" href="index.css">
+</head>
 <body>
     <div class="container">
-        <header>
-            <img src="photo/logo_usarb.png" alt="Logo universitatii">
-            <h1>UNIVERSITATEA DE STAT „ALECU RUSSO” DIN BĂLȚI</h1>
-            <h2>Orarul Cursurilor</h2>
-            <div class="buttons">
-                <button class="btn">Grupe</button>
-                <button class="btn">Profesori</button>
-                <button class="btn">Aule</button>
+        <section id="filters">
+            <h4>Orar cursuri</h4>
+            <button class="btn">Grupe</button>
+            <button class="btn">Profesori</button>
+            <button class="btn">Aule</button>
+
+            <div class="switch">
+                <p>Regim pentru student</p>
+                <div class="switcher"></div>
             </div>
-        </header>
-        <div class="filter-section">
-            
-            <label>
-                <input type="checkbox" class="student-mode"> Regim pentru student
-            </label>
-            <input type="text" placeholder="Căutare..." class="search" value="IS11Z">
-            <select class="day-select">
-                <option selected>Ziua</option>
-                <option selected>Marti</option>
-                <option selected>Miercuri</option>
-                <option selected>Joi</option>
-                <option selected>Vineri</option>
-                <option selected>Sambata</option>
-                <option selected>Duminica</option>
-             
+
+            <input type="search" placeholder="Căutare">
+            <ul>
+                <li>IS11Z</li>
+                <li>IS12Z</li>
+                <li>IS13Z</li>
+            </ul>
+
+            <select>
+                <option>Ziua</option>
+                <option>Luni</option>
+                <option>Marți</option>
+                <option>Miercuri</option>
             </select>
-            <select class="week-select">
-                <option>10 (4.11.2024 - 10.11.2024)</option>
-                <option>10 (10.11.2024 - 16.11.2024)</option>
+            <select>
+                <option>Săptămâna</option>
+                <option>1</option>
+                <option>2</option>
             </select>
-        </div>
-        
-        <table class="lessons">
-            <tbody>
-                <tr>
-                    <td>8:00 - 9:30</td>
-                    <td>Structuri discrete</td>
-                    <td>S</td>
-                    <td>asist. univ.Țîcău V.</td>
-                    <td>aud. 101</td>
-                </tr>
-                <tr>
-                    <td>9:45 - 11:15</td>
-                    <td>Proiectarea paginilor WEB</td>
-                    <td>L</td>
-                    <td>asist. univ.Chilat S.</td>
-                    <td>aud. 141a</td>
-                </tr>
-                <tr>
-                    <td>11:30 - 13:00</td>
-                    <td>Limba engleză I</td>
-                    <td>L</td>
-                    <td>asist. univ.L. Coșulean</td>
-                    <td>aud. 406</td>
-                </tr>
-                <tr>
-                    <td>13:15 - 14:45</td>
-                    <td>Proiectarea paginilor WEB</td>
-                    <td>L</td>
-                    <td>asist. univ.Chilat S.</td>
-                    <td>aud. 141a</td>
-                </tr>
-        </table>
-        <footer>
-            <p>P - Prelegere | S - Seminar | L - Laborator</p>
-            <p>PC - Proiect de Curs | EP - Evaluare periodică</p>
-            <p>C - Consultație | E - Examinare | R - Reexaminare</p>
-        </footer>
+
+            <div class="quick-view">
+                <div>L-4</div>
+                <div style="background-color: #76bd49;">S</div>
+                <div style="background-color: #8080c0;">EP</div>
+            </div>
+
+            <div class="legend">
+                <p>P - Prelegere | S - Seminar | L - Laborator | PC - Proiect de Curs </p>
+            </div>
+
+            <div class="links">
+                <a href="#">Descarcă Orar</a>
+                <a href="#">Examene</a>
+            </div>
+
+            <!-- Добавим таблицу 8x8 -->
+            <div class="schedule-table">
+                <div class="table-header">
+                    <div>1</div>
+                    <div>2</div>
+                    <div>3</div>
+                    <div>4</div>
+                    <div>5</div>
+                    <div>6</div>
+                    <div>7</div>
+                    <div></div>
+                </div>
+                <div class="table-row">
+                    <div class="time">L - 4</div>
+                    <div>P</div>
+                    <div>L</div>
+                    <div>L</div>
+                    <div>L</div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+                <div class="table-row">
+                    <div class="time">Ma - 5</div>
+                    <div>P</div>
+                    <div>P</div>
+                    <div>L</div>
+                    <div>L</div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+                <div class="table-row">
+                    <div class="time">Mi - 6</div>
+                    <div>P</div>
+                    <div>L</div>
+                    <div>L</div>
+                    <div>L</div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+                <div class="table-row">
+                    <div class="time">J - 7</div>
+                    <div>L</div>
+                    <div>L</div>
+                    <div>L</div>
+                    <div>L</div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+                <div class="table-row">
+                    <div class="time">V - 8</div>
+                    <div></div>
+                    <div>L</div>
+                    <div>P</div>
+                    <div>P</div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+                <div class="table-row">
+                    <div class="time">S - 9</div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+                <div class="table-row">
+                    <div class="time">D - 10</div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    
+                </div>
+            </div>
+        </section>
+
+        <section id="timetable">
+            <img src="photo/logo_usarb.png" alt="Logo">
+            <h3>Universitatea de Stat „A. Russo”</h3>
+
+            <div class="grid">
+                <div class="time-slot">8:00 - 9:30</div>
+                <div>
+                    <div>Matematica I</div>
+                    <div>Seminar</div>
+                    <div>asist. univ. Rotari</div>
+                    <div>aud. 101</div>
+                </div>
+
+                <div class="time-slot">9:45 - 11:15</div>
+                <div>
+                    <div>Proiectarea paginilor WEB</div>
+                    <div>Evaluare periodică</div>
+                    <div>lect. univ. G. Cabac</div>
+                    <div>aud. 143</div>
+                </div>
+
+                <div class="time-slot">11:30 - 13:00</div>
+                <div>
+                    <div>Structuri Discrete</div>
+                    <div>Seminar</div>
+                    <div>asist. univ. Țîcău</div>
+                    <div>aud. 103</div>
+                </div>
+            </div>
+        </section>
     </div>
 </body>
 </html>
-

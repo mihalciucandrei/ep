@@ -1,138 +1,260 @@
 * {
-    margin: 0;
+    box-sizing: border-box;
     padding: 0;
+    margin: 0;
+    outline: 0;
 }
 
 body {
-    background: url(photo/фон.jpg) no-repeat;
-    background-size: cover; 
-    top: 0;
-    left: 0;
-    margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
-    display: flex;
-    justify-content: center; 
-    align-items: center;
-    height: 100vh;
+    background-image: url('photo/фон.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: 500;
+   
 }
 
 .container {
-    width: 100%;
-    max-width: 600px;
-    margin: 0; 
-    padding: 20px;
-    background-color:transparent;
-    border-radius: 10px;
-}
-.container h1{
-    -webkit-text-stroke-color: #000000;
-    -webkit-text-stroke-width: 2px;
-}
-.container h2{
-    margin-top: 30px;
-    border: 2px solid rgb(0, 0, 0); 
-  padding: 10px;
-  background-color:white ;
-  color: black;
- 
-  
+    width: 1200px;
+    min-height: 100vh;
+    margin: 20px auto;
+    display: flex;
+    justify-content: space-between;
 }
 
-header {
-    margin-top: 200px;
-    text-align: left; 
-    color: white;
-    text-align: center;
-}
-
-header img {
-   
-    width: 191px;
-    height: 191px;
-}
-
-.btn {
-    margin-top: 40px;
-    padding: 10px 20px;
-    font-size: 16px;
-    border: none;
-    background-color: #569058;
-    color: white;
-    cursor: pointer;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-}
-.filter-section {
-    margin-top: 20px;
+#filters {
+    width: 30%;
     display: flex;
     flex-direction: column;
-    gap: 10px;
-    align-items: flex-start; 
-}
-
-.tab {
-    background-color: #ffffff;
-    color: #000000;
-    padding: 8px;
-    border: none;
-    cursor: pointer;
-    width: 100%;
-    border-radius: 5px;
-    text-align: left; 
-}
-
-.search {
-    padding: 8px;
-    width: 100%;
-    border-radius: 5px;
-    border: 2px solid #000000;
-    text-align: left;
-}
-
-.day-select, .week-select {
-    width: 100%;
-    padding: 8px;
-    border-radius: 5px;
-    border: 2px solid #000000;
-    text-align: left; 
-}
-
-table.lessons {
-    width: 80%;
-    border-collapse: collapse;
-    margin-top: 20px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    background-color: white;
+    padding: 20px;
+    color: #333;
+   gap: 20px;
     
-
+    
 }
 
-table.lessons th, table.lessons td {
-    padding: 12px;
+h4 {
+    width: 100%;
+    height: 60px;
+    background-color: white;
+    color: rgb(52, 52, 52);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+}
+
+.buttons-container {
+    display: flex;
+    justify-content: space-between;
+    
+    
+}
+
+.buttons-container button {
+    width: 90px;
+    height: 35px;
+    border: none;
+    background-color:#25975a;
+    color:white;
+    font-weight: bold;
+     
+}
+
+.buttons-container button:hover {
+    background-color: white;
+    color: black;
+}
+
+.grupe_button {
+    background-color:green;
+    color: black ;
+}
+
+.switch-container {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 15px;
+}
+
+.switch-container p {
+    font-weight: 600;
+}
+
+.switch {
+    background-color: #cccccc;
+    width: 50px;
+    height: 30px;
+}
+
+.switcher {
+    width: 25px;
+    height: 25px;
+    background-color: white;
+    margin: 0 4px;
+}
+
+#search-input {
+    width: 100%;
+    height: 35px;
+    padding: 0 10px;
+    margin-bottom: 15px;
+}
+
+.groups {
+    width: 100%;
+    background-color: white;
+    padding: 10px;
+    overflow-x: hidden;
+}
+
+.groups li {
+    list-style: none;
+    padding: 8px 0;
+    cursor: pointer;
+}
+
+.groups li:hover {
+    background-color: #cae88b;
+}
+
+select {
+    width: 100%;
+    height: 35px;
+    padding: 0 10px;
+    margin-bottom: 15px;
+}
+.schedule-table {
+    display: grid;
+    grid-template-columns: 100px repeat(7, 1fr);
+    gap: 5px;
+    margin-top: 20px;
+}
+
+.table-header {
+    display: contents;
+}
+
+.table-header div {
+    background-color: #25975a;
+    color: white;
     text-align: center;
-    border: 1px solid #555; 
+    font-weight: bold;
+    padding: 8px;
 }
 
-table.lessons th {
-    background-color: #4CAF50;
+.table-row {
+    display: contents;
+}
+
+.table-row div {
+    background-color: #f5f5f5;
+    text-align: center;
+    padding: 10px;
+    border: 1px solid #ddd;
+}
+
+.table-row .time {
+    background-color: #25975a;
+    color: white;
+    font-weight: bold;
+}
+
+.table-row div:hover {
+    background-color: #cae88b;
+}
+
+.quick-view {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+.quick-view div {
+    padding: 10px;
+    text-align: center;
+    background-color: #25975a;
     color: white;
 }
 
-table.lessons tr:nth-child(even) {
-    background-color: #f2f2f2;
+.legend {
+    margin-top: 15px;
+    color: white;
+    font-size: 12px;
 }
 
-table.lessons tr:hover {
-    background-color: #ddd;
+.links a {
+    text-decoration: none;
+    color: white;
+    background-color: #25975a;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 5px;
+    display: inline-block;
 }
 
-table.lessons td {
-    font-size: 14px;
+.links a:hover {
+    background-color: #1a6b49;
 }
 
+.atention {
+    width: 100%;
+    background-color: white;
+    color: #25975a;
+    font-size: 16px;
+    padding: 15px;
+    text-align: center;
+}
 
-footer {
+#timetable {
+    width: 50%;
+    padding: 20px;
+    color: #fff;
+}
+
+#timetable img {
+    width: 130px;
+    height: 100px;
     margin-top: 20px;
-    text-align: left; 
-    color: #ffffff;
+}
+
+#timetable h3 {
+    color: rgb(0, 0, 0);
+    text-align: center;
+    margin-top: 10px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    gap: 15px;
+    background-color:white;
+    color: black;
+    text-align: center;
+    border: black;
+
+}
+
+.time-slot {
+    background-color: #25975a;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.cell {
+    background-color: white;
+    color: #333;
+    padding: 15px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+.cell .subject,
+.cell .auditorium {
+    font-weight: bold;
+    color: #333;
 }
